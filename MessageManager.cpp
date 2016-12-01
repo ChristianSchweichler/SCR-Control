@@ -16,7 +16,9 @@ void _MessageManager::update() {
     if(input == '[') {
       resetInputBuffer();
     } else if(input == ']') {
-      callbackFunction(inputBuffer);
+      if (callbackFunction != 0) {
+        callbackFunction(inputBuffer);
+      }
       resetInputBuffer();
     } else {
      inputBuffer[inputBufferIndex++] = input;

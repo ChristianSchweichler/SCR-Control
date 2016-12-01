@@ -18,7 +18,7 @@ class _MessageManager {
     byte inputBufferIndex;
     char inputBuffer[64];
 	  callback_function callbackFunction;
-   void resetInputBuffer();
+    void resetInputBuffer();
     
 };
 
