@@ -2,6 +2,7 @@
 #define _Lane_h
 
 #include "Arduino.h"
+#include "MessageManager.h";
 
 class Lane {
 
@@ -18,7 +19,7 @@ class Lane {
     int sensorPin;
     int minLapTime;
     int lastSensorTime;
-  
+    const int threshold = 800;
 };
 
 #endif
