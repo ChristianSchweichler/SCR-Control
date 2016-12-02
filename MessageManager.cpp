@@ -38,7 +38,13 @@ void _MessageManager::setCallbackFunction(callback_function callbackFunction) {
 void _MessageManager::write(char* msg) {
   Serial.print('[');
   Serial.print(msg);
-  Serial.print(']');
+  Serial.println(']');
+}
+
+void _MessageManager::sendLapTimeMessage(int lane, unsigned long lapTime) {
+  char buf[32];
+  sprintf(buf, "LAPTIME:%d:%lu", lane, lapTime);
+  write(buf);
 }
 
 _MessageManager MessageManager;

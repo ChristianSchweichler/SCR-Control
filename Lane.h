@@ -7,19 +7,24 @@
 class Lane {
 
   public:
-    Lane();
+    Lane(int nr);
     void setSensorPin(int sensorPin);
-    void setMinLapTime(int minLapTime);
+    void setMinLapTime(unsigned long minLapTime);
+    void setLastSensorTime(unsigned long lastSensorTime);
+    void setOverSensor(boolean overSensor);
     int getSensorPin();
-    int getMinLapTime();
-    int getLastSensorTime();
+    boolean isOverSensor();
+    unsigned long getMinLapTime();
+    unsigned long getLastSensorTime();
     void update();
     
   private:
+    int nr;
     int sensorPin;
-    int minLapTime;
-    int lastSensorTime;
-    const int threshold = 800;
+    boolean overSensor;
+    unsigned long minLapTime;
+    unsigned long lastSensorTime;
+    static const int threshold = 800;
 };
 
 #endif

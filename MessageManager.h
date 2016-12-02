@@ -13,6 +13,7 @@ class _MessageManager {
 		void setCallbackFunction(callback_function callbackFunction);
     void update();
     void write(char* msg);
+    void sendLapTimeMessage(int lane, unsigned long lapTime);
 
   private:
     byte inputBufferIndex;
