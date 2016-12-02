@@ -12,7 +12,7 @@ class _MessageManager {
 		void setBaudRate(long baudRate);
 		void setCallbackFunction(callback_function callbackFunction);
     void update();
-		void test();
+    void write(char* msg);
 
   private:
     byte inputBufferIndex;

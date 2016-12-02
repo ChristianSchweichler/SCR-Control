@@ -35,4 +35,10 @@ void _MessageManager::setCallbackFunction(callback_function callbackFunction) {
 	this->callbackFunction = callbackFunction;
 }
 
+void _MessageManager::write(char* msg) {
+  Serial.print('[');
+  Serial.print(msg);
+  Serial.print(']');
+}
+
 _MessageManager MessageManager;
